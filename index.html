@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Richards Health — Health Insurance Strategy for Self‑Employed Business Owners</title>
+    <meta
+      name="description"
+      content="Advisory‑driven individual health coverage strategy for self‑employed business owners, founders, contractors, and independent professionals across 29 states."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        /* Primary — vibrant, confident */
+        --rh-primary: #0d9488;
+        --rh-primary-dark: #0f766e;
+        --rh-primary-light: #2dd4bf;
+        --rh-primary-muted: #ccfbf1;
+
+        /* Secondary — energy and highlights */
+        --rh-secondary: #f43f5e;
+        --rh-secondary-dark: #e11d48;
+        --rh-secondary-light: #fda4af;
+        --rh-secondary-muted: #ffe4e6;
+
+        /* Accent — mint/fresh */
+        --rh-accent: #14b8a6;
+        --rh-accent-muted: #99f6e4;
+
+        /* Trust / calm */
+        --rh-trust: #0c4a6e;
+        --rh-trust-light: #0ea5e9;
+        --rh-trust-muted: #e0f2fe;
+
+        /* Neutrals */
+        --rh-neutral-900: #0f172a;
+        --rh-neutral-700: #334155;
+        --rh-neutral-500: #64748b;
+        --rh-neutral-300: #cbd5e1;
+        --rh-neutral-100: #f1f5f9;
+        --rh-neutral-50: #f8fafc;
+        --rh-white: #ffffff;
+
+        /* Typography */
+        --rh-font-display: "Syne", "Plus Jakarta Sans", system-ui, sans-serif;
+        --rh-font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+
+        /* Spacing */
+        --rh-space-xs: 0.25rem;
+        --rh-space-sm: 0.5rem;
+        --rh-space-md: 1rem;
+        --rh-space-lg: 1.5rem;
+        --rh-space-xl: 2rem;
+        --rh-space-2xl: 3rem;
+        --rh-space-3xl: 4rem;
+
+        /* Radius */
+        --rh-radius-sm: 6px;
+        --rh-radius-md: 10px;
+        --rh-radius-lg: 14px;
+        --rh-radius-full: 9999px;
+
+        /* Motion */
+        --rh-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        --rh-duration: 0.2s;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: var(--rh-font-body);
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--rh-neutral-900);
+        background: radial-gradient(circle at top left, #ecfeff 0, #f8fafc 45%, #e0f2fe 100%);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page-shell {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .page-inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 1.25rem 1.25rem 3rem;
+      }
+
+      /* Top navigation */
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(16px);
+        background: linear-gradient(
+          to bottom,
+          rgba(248, 250, 252, 0.9),
+          rgba(248, 250, 252, 0.8),
+          transparent
+        );
+      }
+
+      .nav-inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0.75rem 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+
+      .brand-mark {
+        width: 32px;
+        height: 32px;
+        border-radius: 999px;
+        background: conic-gradient(
+          from 200deg,
+          var(--rh-primary),
+          var(--rh-accent),
+          var(--rh-trust-light),
+          var(--rh-secondary),
+          var(--rh-primary)
+        );
+        box-shadow: 0 8px 20px rgba(15, 23, 42, 0.24);
+        position: relative;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 4px;
+        border-radius: inherit;
+        background: radial-gradient(circle at 30% 20%, #ffffff, rgba(255, 255, 255, 0.1));
+      }
+
+      .brand-text-main {
+        font-family: var(--rh-font-display);
+        font-weight: 800;
+        letter-spacing: 0.03em;
+        font-size: 1.05rem;
+      }
+
+      .brand-text-sub {
+        font-size: 0.75rem;
+        color: var(--rh-neutral-500);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        font-size: 0.875rem;
+      }
+
+      .nav-link {
+        color: var(--rh-neutral-600);
+        position: relative;
+        padding-bottom: 0.25rem;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--rh-primary), var(--rh-trust-light));
+        border-radius: 999px;
+        transition: width var(--rh-duration) var(--rh-ease);
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+        padding: 0.7rem 1.25rem;
+        font-family: var(--rh-font-body);
+        font-size: 0.95rem;
+        font-weight: 600;
+        border-radius: var(--rh-radius-md);
+        border: none;
+        cursor: pointer;
+        transition:
+          background var(--rh-duration) var(--rh-ease),
+          transform var(--rh-duration) var(--rh-ease),
+          box-shadow var(--rh-duration) var(--rh-ease),
+          color var(--rh-duration) var(--rh-ease),
+          border-color var(--rh-duration) var(--rh-ease);
+        white-space: nowrap;
+      }
+
+      .btn-primary {
+        background: radial-gradient(circle at 0 0, var(--rh-primary-light), var(--rh-primary-dark));
+        color: var(--rh-white);
+        box-shadow: 0 10px 26px rgba(13, 148, 136, 0.35);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 32px rgba(13, 148, 136, 0.45);
+      }
+
+      .btn-outline {
+        background: rgba(248, 250, 252, 0.8);
+        color: var(--rh-primary-dark);
+        border: 1px solid rgba(15, 118, 110, 0.18);
+      }
+
+      .btn-outline:hover {
+        background: var(--rh-primary-muted);
+      }
+
+      .btn-secondary {
+        background: var(--rh-trust);
+        color: var(--rh-white);
+      }
+
+      .btn-secondary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 26px rgba(12, 74, 110, 0.4);
+      }
+
+      /* Hero */
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+        gap: 2.25rem;
+        padding: 3.5rem 1.25rem 3rem;
+      }
+
+      .hero-eyebrow {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.13em;
+        font-weight: 600;
+        color: var(--rh-primary-dark);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .hero-eyebrow-dot {
+        width: 18px;
+        height: 18px;
+        border-radius: 999px;
+        background: radial-gradient(circle at 30% 20%, var(--rh-accent-muted), var(--rh-primary));
+        box-shadow: 0 6px 16px rgba(13, 148, 136, 0.3);
+      }
+
+      .hero-title {
+        font-family: var(--rh-font-display);
+        font-size: clamp(2.2rem, 4vw, 3rem);
+        line-height: 1.12;
+        margin: 0 0 1rem;
+        letter-spacing: -0.02em;
+      }
+
+      .hero-title span {
+        background: linear-gradient(120deg, var(--rh-primary-dark), var(--rh-trust-light));
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      .hero-subtitle {
+        font-size: 1.05rem;
+        color: var(--rh-neutral-600);
+        max-width: 45ch;
+      }
+
+      .hero-cta-row {
+        margin-top: 1.75rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+        align-items: center;
+      }
+
+      .hero-meta {
+        margin-top: 1.25rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.25rem;
+        font-size: 0.85rem;
+        color: var(--rh-neutral-600);
+      }
+
+      .hero-meta span {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+
+      .hero-meta-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: var(--rh-primary);
+      }
+
+      .hero-panel {
+        align-self: center;
+        background: radial-gradient(circle at top, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.98));
+        border-radius: 24px;
+        padding: 1.35rem 1.25rem 1.6rem;
+        color: var(--rh-white);
+        position: relative;
+        overflow: hidden;
+        box-shadow:
+          0 20px 45px rgba(15, 23, 42, 0.7),
+          0 0 0 1px rgba(15, 23, 42, 0.9);
+      }
+
+      .hero-panel::before {
+        content: "";
+        position: absolute;
+        inset: -120px;
+        background:
+          radial-gradient(circle at top left, rgba(45, 212, 191, 0.22), transparent 55%),
+          radial-gradient(circle at bottom right, rgba(14, 165, 233, 0.18), transparent 55%);
+        opacity: 0.9;
+        pointer-events: none;
+      }
+
+      .hero-panel-inner {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-panel-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 0.75rem;
+        margin-bottom: 0.85rem;
+      }
+
+      .hero-panel-label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.13em;
+        color: #e2e8f0;
+      }
+
+      .hero-panel-badge {
+        padding: 0.25rem 0.7rem;
+        border-radius: 999px;
+        background: rgba(15, 23, 42, 0.85);
+        border: 1px solid rgba(148, 163, 184, 0.6);
+        font-size: 0.7rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .hero-panel-badge-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 999px;
+        background: #4ade80;
+        box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.35);
+      }
+
+      .hero-panel-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 0 0 0.4rem;
+      }
+
+      .hero-panel-sub {
+        font-size: 0.8rem;
+        color: #cbd5e1;
+        margin-bottom: 0.85rem;
+      }
+
+      .hero-panel-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1rem;
+      }
+
+      .hero-panel-list li {
+        display: flex;
+        align-items: baseline;
+        gap: 0.5rem;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+        font-size: 0.9rem;
+        color: #e2e8f0;
+      }
+
+      .hero-panel-list li:last-child {
+        border-bottom: none;
+      }
+
+      .hero-panel-list .term {
+        font-weight: 600;
+        color: #f1f5f9;
+        min-width: 8rem;
+      }
+
+      .hero-panel-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 0.4rem;
+      }
+
+      .hero-panel-status {
+        font-size: 0.75rem;
+        color: #e2e8f0;
+      }
+
+      .hero-panel-cta {
+        display: inline-block;
+        font-size: 0.8rem;
+        padding: 0.4rem 0.85rem;
+        border-radius: 999px;
+        border: 1px solid rgba(56, 189, 248, 0.8);
+        background: linear-gradient(
+          120deg,
+          rgba(56, 189, 248, 0.14),
+          rgba(16, 185, 129, 0.22)
+        );
+        color: #e2e8f0;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .hero-panel-cta:hover {
+        color: #f1f5f9;
+        background: linear-gradient(
+          120deg,
+          rgba(56, 189, 248, 0.25),
+          rgba(16, 185, 129, 0.35)
+        );
+      }
+
+      /* Sections */
+      main {
+        padding: 0 1.25rem 2rem;
+      }
+
+      section {
+        padding: 2.5rem 0 0;
+      }
+
+      .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .section-kicker {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-weight: 600;
+        color: var(--rh-primary-dark);
+        margin-bottom: 0.4rem;
+      }
+
+      .section-title {
+        font-family: var(--rh-font-display);
+        font-size: 1.5rem;
+        letter-spacing: -0.02em;
+        margin: 0;
+      }
+
+      .section-subtitle {
+        max-width: 32rem;
+        font-size: 0.95rem;
+        color: var(--rh-neutral-600);
+      }
+
+      .section-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.3fr);
+        gap: 2rem;
+      }
+
+      .section-card {
+        background: rgba(248, 250, 252, 0.95);
+        border-radius: var(--rh-radius-lg);
+        border: 1px solid rgba(148, 163, 184, 0.3);
+        padding: 1.5rem 1.35rem;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      }
+
+      .section-card h3 {
+        margin: 0 0 0.65rem;
+        font-size: 1.05rem;
+      }
+
+      .section-card p {
+        font-size: 0.95rem;
+        color: var(--rh-neutral-700);
+        margin: 0 0 0.6rem;
+      }
+
+      .section-card ul {
+        margin: 0.25rem 0 0;
+        padding-left: 1.1rem;
+        font-size: 0.95rem;
+        color: var(--rh-neutral-700);
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.25rem 0.65rem;
+        border-radius: 999px;
+        background: rgba(236, 253, 245, 0.9);
+        border: 1px solid rgba(34, 197, 94, 0.35);
+        font-size: 0.8rem;
+        color: var(--rh-neutral-700);
+      }
+
+      .pill-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 999px;
+        background: #22c55e;
+      }
+
+      /* SEO + States */
+      .band {
+        margin-top: 3rem;
+        border-radius: 1.5rem;
+        background: linear-gradient(135deg, #ecfeff, #e0f2fe, #fdf2f8);
+        padding: 1.6rem 1.5rem 1.9rem;
+        border: 1px solid rgba(148, 163, 184, 0.4);
+      }
+
+      .band h3 {
+        margin-top: 0;
+        margin-bottom: 0.4rem;
+        font-size: 1.05rem;
+      }
+
+      .band p {
+        margin: 0 0 0.75rem;
+        font-size: 0.95rem;
+        color: var(--rh-neutral-700);
+      }
+
+      .states-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.4rem 1.4rem;
+        font-size: 0.85rem;
+        color: var(--rh-neutral-700);
+      }
+
+      .states-grid span {
+        position: relative;
+        padding-left: 0.85rem;
+      }
+
+      .states-grid span::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.55em;
+        width: 5px;
+        height: 5px;
+        border-radius: 999px;
+        background: var(--rh-primary);
+      }
+
+      /* Trust & About */
+      .trust-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.5fr);
+        gap: 1.75rem;
+      }
+
+      .trust-list {
+        list-style: none;
+        padding: 0;
+        margin: 0.6rem 0 0;
+        font-size: 0.95rem;
+        color: var(--rh-neutral-700);
+      }
+
+      .trust-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.6rem;
+        margin-bottom: 0.45rem;
+      }
+
+      .trust-icon {
+        margin-top: 0.15rem;
+        width: 16px;
+        height: 16px;
+        border-radius: 999px;
+        background: rgba(34, 197, 94, 0.14);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+        color: #16a34a;
+      }
+
+      blockquote {
+        margin: 0.75rem 0 0;
+        padding-left: 0.9rem;
+        border-left: 3px solid rgba(148, 163, 184, 0.7);
+        font-size: 0.9rem;
+        color: var(--rh-neutral-700);
+        font-style: italic;
+      }
+
+      blockquote footer {
+        margin-top: 0.35rem;
+        font-size: 0.8rem;
+        color: var(--rh-neutral-500);
+        font-style: normal;
+      }
+
+      /* Services */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.35rem;
+      }
+
+      .service-card {
+        background: rgba(15, 23, 42, 0.97);
+        color: var(--rh-white);
+        border-radius: 1.2rem;
+        padding: 1.3rem 1.2rem 1.3rem;
+        border: 1px solid rgba(148, 163, 184, 0.55);
+        box-shadow: 0 16px 38px rgba(15, 23, 42, 0.7);
+      }
+
+      .service-label {
+        font-size: 0.75rem;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        color: rgba(148, 163, 184, 0.95);
+        margin-bottom: 0.4rem;
+      }
+
+      .service-title {
+        font-size: 1.02rem;
+        margin: 0 0 0.4rem;
+      }
+
+      .service-body {
+        font-size: 0.9rem;
+        color: rgba(226, 232, 240, 0.9);
+        margin-bottom: 0.5rem;
+      }
+
+      .service-list {
+        margin: 0.35rem 0 0;
+        padding-left: 1.1rem;
+        font-size: 0.88rem;
+        color: rgba(203, 213, 225, 0.95);
+      }
+
+      /* FAQ */
+      .faq-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.5fr);
+        gap: 1.75rem;
+      }
+
+      .faq-item {
+        padding: 1rem 0.75rem;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+      }
+
+      .faq-item h3 {
+        font-size: 0.98rem;
+        margin: 0 0 0.35rem;
+      }
+
+      .faq-item p {
+        font-size: 0.9rem;
+        color: var(--rh-neutral-700);
+        margin: 0;
+      }
+
+      /* Contact */
+      .contact {
+        margin-top: 3rem;
+        padding: 1.85rem 1.6rem 1.9rem;
+        border-radius: 1.5rem;
+        background: radial-gradient(circle at top left, #ecfdf5, #e0f2fe);
+        border: 1px solid rgba(148, 163, 184, 0.5);
+        box-shadow: 0 14px 32px rgba(15, 23, 42, 0.18);
+      }
+
+      .contact-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1.5rem;
+        margin-bottom: 1.3rem;
+      }
+
+      .contact-title {
+        font-family: var(--rh-font-display);
+        font-size: 1.35rem;
+        margin: 0 0 0.4rem;
+        color: var(--rh-neutral-900);
+      }
+
+      .contact-copy {
+        font-size: 0.94rem;
+        color: var(--rh-neutral-700);
+        max-width: 32rem;
+      }
+
+
+
+      .contact-meta {
+        font-size: 0.8rem;
+        color: var(--rh-neutral-600);
+      }
+
+      .contact-form-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.3fr);
+        gap: 1.6rem;
+      }
+
+      form {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem 1rem;
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        font-size: 0.85rem;
+      }
+
+      .field-full {
+        grid-column: 1 / -1;
+      }
+
+      label {
+        font-weight: 500;
+        color: var(--rh-neutral-700);
+      }
+
+      .hint {
+        font-size: 0.78rem;
+        color: var(--rh-neutral-500);
+      }
+
+      input,
+      select,
+      textarea {
+        border-radius: 0.75rem;
+        border: 1px solid rgba(148, 163, 184, 0.8);
+        padding: 0.55rem 0.65rem;
+        font: inherit;
+        background: rgba(248, 250, 252, 0.95);
+        transition:
+          border-color var(--rh-duration) var(--rh-ease),
+          box-shadow var(--rh-duration) var(--rh-ease),
+          background var(--rh-duration) var(--rh-ease);
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: rgba(13, 148, 136, 0.9);
+        box-shadow: 0 0 0 1px rgba(13, 148, 136, 0.85), 0 0 0 6px rgba(45, 212, 191, 0.25);
+        background: #ffffff;
+      }
+
+      textarea {
+        min-height: 90px;
+        resize: vertical;
+      }
+
+      .contact-cta-row {
+        margin-top: 0.35rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      footer {
+        padding: 2rem 1.25rem 2.5rem;
+        font-size: 0.8rem;
+        color: var(--rh-neutral-500);
+        text-align: center;
+      }
+
+      footer a {
+        color: var(--rh-primary-dark);
+      }
+
+      /* Responsive */
+      @media (max-width: 960px) {
+        .hero {
+          grid-template-columns: minmax(0, 1fr);
+          padding-top: 2.6rem;
+        }
+
+        .section-grid,
+        .trust-grid,
+        .contact-form-grid,
+        .faq-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .services-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-inner {
+          padding-inline: 1rem;
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .nav-cta {
+          display: inline-flex;
+        }
+
+        .hero {
+          padding-inline: 1rem;
+        }
+
+        main {
+          padding-inline: 1rem;
+        }
+
+        .services-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .states-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        form {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.001ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="nav">
+        <div class="nav-inner">
+          <a href="#top" class="brand">
+            <div class="brand-mark" aria-hidden="true"></div>
+            <div>
+              <div class="brand-text-main">Richards Health</div>
+              <div class="brand-text-sub">Health insurance strategy advisory</div>
+            </div>
+          </a>
+          <nav aria-label="Main navigation">
+            <div class="nav-links">
+              <a href="#designed-for" class="nav-link">Designed for operators</a>
+              <a href="#what-makes-this-different" class="nav-link">How it works</a>
+              <a href="#states" class="nav-link">States served</a>
+              <a href="#faq" class="nav-link">FAQ</a>
+              <a href="#contact" class="nav-link">Contact</a>
+            </div>
+          </nav>
+          <a href="#contact" class="nav-cta">
+            <button class="btn btn-primary" type="button">Book a strategy call</button>
+          </a>
+        </div>
+      </header>
+
+      <div id="top" class="page-inner">
+        <section class="hero" aria-labelledby="hero-title">
+          <div>
+            <div class="hero-eyebrow">
+              <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+              Health coverage as a business decision
+            </div>
+            <h1 id="hero-title" class="hero-title">
+              Health Insurance Strategy for <span>Self‑Employed Business Owners</span>
+            </h1>
+            <p class="hero-subtitle">
+              Advisory‑driven individual coverage design for founders, contractors, and independent
+              professionals across Georgia, Texas, Florida, and 26 additional states.
+            </p>
+            <div class="hero-cta-row">
+              <a href="#contact">
+                <button class="btn btn-primary" type="button">Schedule a coverage strategy call</button>
+              </a>
+              <a href="#contact">
+                <button class="btn btn-outline" type="button">Request a structured cost review</button>
+              </a>
+            </div>
+            <div class="hero-meta">
+              <span>
+                <span class="hero-meta-dot"></span>
+                Built for self‑employed and 1099‑heavy businesses
+              </span>
+              <span>
+                <span class="hero-meta-dot" style="background: var(--rh-trust-light)"></span>
+                Individual coverage advisory across 29 states
+              </span>
+            </div>
+          </div>
+
+          <aside class="hero-panel" aria-label="What we review in your strategy call">
+            <div class="hero-panel-inner">
+              <div class="hero-panel-header">
+                <div>
+                  <h2 class="hero-panel-title">What we review</h2>
+                  <p class="hero-panel-sub">
+                    In a 20–30 minute call we map your current exposure and options so you can
+                    decide with clarity—before changing plans.
+                  </p>
+                </div>
+                <div class="hero-panel-badge">
+                  <span class="hero-panel-badge-dot"></span>
+                  <span>Appointments within 3–5 business days</span>
+                </div>
+              </div>
+              <ul class="hero-panel-list">
+                <li><span class="term">Annual exposure</span> Premium + deductible + out-of-pocket, modeled across plan types</li>
+                <li><span class="term">Network</span> In-network providers and geography so coverage matches how you use care</li>
+                <li><span class="term">Tax &amp; entity</span> Implications for your structure and income variability</li>
+                <li><span class="term">Options</span> Marketplace and private plans available in your state</li>
+              </ul>
+              <div class="hero-panel-footer">
+                <div class="hero-panel-status">
+                  No advisory fees. No high‑pressure sales process.
+                </div>
+                <a href="#contact" class="hero-panel-cta">Start with a structured intake →</a>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Designed for business operators -->
+        <main>
+          <section id="designed-for" aria-labelledby="designed-for-title">
+            <header class="section-header">
+              <div>
+                <div class="section-kicker">Designed for business operators, not employees</div>
+                <h2 id="designed-for-title" class="section-title">Your income doesn’t look like a W2 salary. Your coverage shouldn’t either.</h2>
+              </div>
+              <p class="section-subtitle">
+                If you operate independently, your health coverage is a financial risk decision—not
+                a checkbox. This advisory treats it with the same structure you apply to the rest of
+                your business.
+              </p>
+            </header>
+
+            <div class="section-grid">
+              <div>
+                <p>
+                  Most self‑employed professionals default to marketplace plans without understanding
+                  the full picture:
+                </p>
+                <ul>
+                  <li>True annual exposure beyond just deductible and premium</li>
+                  <li>Network limitations that impact how and where you can get care</li>
+                  <li>Tax implications based on entity type and income variability</li>
+                  <li>Alternative private structures when available in your state</li>
+                  <li>State‑specific plan differences that materially change your options</li>
+                </ul>
+                <p>
+                  Health insurance is one of your largest fixed costs. It deserves a structured,
+                  model‑driven evaluation—not a rushed enrollment call in Q4.
+                </p>
+              </div>
+              <div class="section-card">
+                <h3>From “plans” to strategy</h3>
+                <p>
+                  Instead of asking “Which plan is cheapest?”, we start with “What level of risk is
+                  acceptable for your business and household?”
+                </p>
+                <p>Each review includes:</p>
+                <ul>
+                  <li>Current plan and exposure mapping</li>
+                  <li>Income and volatility review</li>
+                  <li>Scenario modeling across plan types</li>
+                  <li>Clear recommendations in plain language</li>
+                </ul>
+                <div style="margin-top: 0.9rem">
+                  <span class="pill">
+                    <span class="pill-dot"></span>
+                    Built for owners making $80k–$300k+ who think like operators
+                  </span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- What makes this different -->
+          <section id="what-makes-this-different" aria-labelledby="different-title">
+            <header class="section-header">
+              <div>
+                <div class="section-kicker">What makes this different</div>
+                <h2 id="different-title" class="section-title">Not a call center. Not a volume‑based enrollment shop.</h2>
+              </div>
+              <p class="section-subtitle">
+                This is an advisory model for independent earners who want clarity, structure, and a
+                long‑term coverage strategy—not a one‑time quote.
+              </p>
+            </header>
+
+            <div class="section-grid">
+              <div>
+                <p>Every client engagement includes:</p>
+                <ul>
+                  <li>State‑specific plan and carrier analysis</li>
+                  <li>Exposure modeling across realistic care scenarios</li>
+                  <li>Income variability review for self‑employed and 1099‑heavy households</li>
+                  <li>Structured option comparison—ACA marketplace and private structures</li>
+                  <li>Long‑term advisory support at renewal and during life changes</li>
+                </ul>
+                <p>
+                  If you’re looking only for the lowest monthly premium with no context, this isn’t
+                  the right fit.
+                  <br />
+                  If you want clarity, structure, and a partner who understands business operators,
+                  it is.
+                </p>
+              </div>
+              <div class="section-card">
+                <h3>What to expect</h3>
+                <p>
+                  The process is designed to respect your time and keep the conversation focused:
+                </p>
+                <ul>
+                  <li>Focused 20–30 minute structured review</li>
+                  <li>Clear next steps and documentation after your call</li>
+                  <li>Transparent compensation and carrier relationships</li>
+                  <li>Ongoing support as income and needs change</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- SEO + States served -->
+          <section id="states" aria-labelledby="states-title">
+            <header class="section-header">
+              <div>
+                <div class="section-kicker">Multi‑state expertise</div>
+                <h2 id="states-title" class="section-title">Serving self‑employed professionals across 29 states</h2>
+              </div>
+              <p class="section-subtitle">
+                With active licensing across Georgia, Texas, Florida, North Carolina, Ohio, and
+                beyond, coverage strategies are tailored to the regulatory and carrier environment
+                in each state.
+              </p>
+            </header>
+
+            <div class="band">
+              <h3>Why state‑level strategy matters</h3>
+              <p>
+                Plan structures, underwriting, and networks vary more than most people realize.
+                Multi‑state experience helps avoid blind spots when you move, expand, or operate in
+                multiple jurisdictions.
+              </p>
+              <p style="font-weight: 600; margin-bottom: 0.4rem">Coverage advisory available in:</p>
+              <div class="states-grid" aria-label="States currently served">
+                <span>Alabama</span>
+                <span>Arkansas</span>
+                <span>Colorado</span>
+                <span>Delaware</span>
+                <span>Florida</span>
+                <span>Georgia</span>
+                <span>Illinois</span>
+                <span>Indiana</span>
+                <span>Iowa</span>
+                <span>Kansas</span>
+                <span>Kentucky</span>
+                <span>Louisiana</span>
+                <span>Maryland</span>
+                <span>Michigan</span>
+                <span>Mississippi</span>
+                <span>Missouri</span>
+                <span>Montana</span>
+                <span>Nebraska</span>
+                <span>Nevada</span>
+                <span>North Carolina</span>
+                <span>Ohio</span>
+                <span>Oklahoma</span>
+                <span>South Carolina</span>
+                <span>South Dakota</span>
+                <span>Tennessee</span>
+                <span>Texas</span>
+                <span>Utah</span>
+                <span>Virginia</span>
+                <span>West Virginia</span>
+                <span>Wisconsin</span>
+                <span>Wyoming</span>
+              </div>
+              <p style="margin-top: 0.9rem; font-size: 0.86rem; color: var(--rh-neutral-700)">
+                If you operate a business in one of these states, your review will focus on the
+                specific carriers, plan structures, and regulatory rules that apply to you.
+              </p>
+            </div>
+          </section>
+
+          <!-- Trust & About -->
+          <section id="about" aria-labelledby="about-title">
+            <header class="section-header">
+              <div>
+                <div class="section-kicker">Why independent operators choose this advisory</div>
+                <h2 id="about-title" class="section-title">Built for independent earners who think like operators</h2>
+              </div>
+              <p class="section-subtitle">
+                The focus is narrow by design: self‑employed professionals, contractor‑heavy teams,
+                and small businesses that treat health coverage as part of their financial system.
+              </p>
+            </header>
+
+            <div class="trust-grid">
+              <div>
+                <p>
+                  I work with self‑employed professionals who view health coverage as a financial
+                  decision—not just a compliance requirement.
+                </p>
+                <p>The advisory model prioritizes:</p>
+                <ul class="trust-list">
+                  <li>
+                    <span class="trust-icon" aria-hidden="true">✓</span>
+                    <span>Clear exposure modeling before you change anything</span>
+                  </li>
+                  <li>
+                    <span class="trust-icon" aria-hidden="true">✓</span>
+                    <span>State‑specific plan comparison with practical recommendations</span>
+                  </li>
+                  <li>
+                    <span class="trust-icon" aria-hidden="true">✓</span>
+                    <span>Long‑term coverage planning as your income and team evolve</span>
+                  </li>
+                  <li>
+                    <span class="trust-icon" aria-hidden="true">✓</span>
+                    <span>Decision clarity, in plain language, with no pressure</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p style="font-weight: 600">Authority signals without the noise:</p>
+                <ul class="trust-list">
+                  <li>
+                    <span class="trust-icon" aria-hidden="true">✓</span>
+                    <span>Multi‑state licensed with a focus on self‑employed and contractor markets</span>
+                  </li>
+                  <li>
+                    <span class="trust-icon" aria-hidden="true">✓</span>
+                    <span>Structured evaluation process instead of one‑size‑fits‑all recommendations</span>
+                  </li>
+                  <li>
+                    <span class="trust-icon" aria-hidden="true">✓</span>
+                    <span>Ongoing renewal and income‑adjustment reviews</span>
+                  </li>
+                  <li>
+                    <span class="trust-icon" aria-hidden="true">✓</span>
+                    <span>Experience across both marketplace and private individual coverage</span>
+                  </li>
+                </ul>
+                <blockquote>
+                  “Tyler walked us through options we didn’t even know existed. The process felt
+                  strategic instead of transactional.”
+                  <footer>Small Business Owner, Georgia</footer>
+                </blockquote>
+              </div>
+            </div>
+          </section>
+
+          <!-- Services -->
+          <section id="services" aria-labelledby="services-title">
+            <header class="section-header">
+              <div>
+                <div class="section-kicker">Services</div>
+                <h2 id="services-title" class="section-title">Individual health coverage advisory, built like a system</h2>
+              </div>
+              <p class="section-subtitle">
+                From initial evaluation to ongoing support, the goal is simple: help business owners
+                design smarter health coverage strategies.
+              </p>
+            </header>
+
+            <div class="services-grid">
+              <article class="service-card">
+                <div class="service-label">Phase 1</div>
+                <h3 class="service-title">Strategic evaluation</h3>
+                <p class="service-body">
+                  We begin with a structured review of your current coverage, how you actually use
+                  care, and how health costs interact with your business.
+                </p>
+                <ul class="service-list">
+                  <li>Current premium and deductible structure</li>
+                  <li>Network access and geography</li>
+                  <li>Annual out‑of‑pocket exposure</li>
+                  <li>Income volatility and entity type</li>
+                  <li>State‑specific plan landscape</li>
+                </ul>
+              </article>
+
+              <article class="service-card">
+                <div class="service-label">Phase 2</div>
+                <h3 class="service-title">Structured comparison</h3>
+                <p class="service-body">
+                  You’ll see side‑by‑side options framed around exposure and sustainability—not just
+                  the lowest monthly premium.
+                </p>
+                <ul class="service-list">
+                  <li>ACA marketplace plans where appropriate</li>
+                  <li>Private individual coverage structures</li>
+                  <li>Alternative plan designs where available</li>
+                  <li>Scenario‑based trade‑offs in plain language</li>
+                </ul>
+              </article>
+
+              <article class="service-card">
+                <div class="service-label">Phase 3</div>
+                <h3 class="service-title">Ongoing advisory support</h3>
+                <p class="service-body">
+                  Your business evolves. Your coverage should too. Advisory support continues beyond
+                  the initial enrollment.
+                </p>
+                <ul class="service-list">
+                  <li>Annual renewal analysis and structure check‑ins</li>
+                  <li>Mid‑year income adjustment reviews</li>
+                  <li>Life event support when variables change</li>
+                  <li>Ongoing plan performance evaluation</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <!-- FAQ -->
+          <section id="faq" aria-labelledby="faq-title">
+            <header class="section-header">
+              <div>
+                <div class="section-kicker">FAQ</div>
+                <h2 id="faq-title" class="section-title">Good fit, clear expectations</h2>
+              </div>
+              <p class="section-subtitle">
+                A few common questions, answered directly. If you’re still unsure after reading,
+                you’re welcome to ask during your strategy review.
+              </p>
+            </header>
+
+            <div class="faq-grid">
+              <div>
+                <div class="faq-item">
+                  <h3>Do you offer employer group health plans?</h3>
+                  <p>
+                    No. This advisory specializes exclusively in individual and self‑employed
+                    coverage structures. That focus allows for deeper work on plan design, exposure,
+                    and long‑term fit for owners and independent professionals.
+                  </p>
+                </div>
+                <div class="faq-item">
+                  <h3>Is this only marketplace coverage?</h3>
+                  <p>
+                    No. Marketplace and private options are evaluated depending on what’s available
+                    and suitable in your state. The goal is to choose the structure that best fits
+                    your risk profile and business—not a single channel.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div class="faq-item">
+                  <h3>Do you charge advisory fees?</h3>
+                  <p>
+                    No. I don’t charge advisory or consultation fees. I’m paid only when you enroll
+                    in a plan I recommend—so my compensation is tied to you choosing coverage, not
+                    to the review itself.
+                  </p>
+                </div>
+                <div class="faq-item">
+                  <h3>How long does the review take?</h3>
+                  <p>
+                    Initial structured reviews typically take 20–30 minutes. You’ll leave with a
+                    clearer understanding of your current exposure, potential alternatives, and next
+                    steps if you choose to move forward.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Contact -->
+          <section id="contact" class="contact" aria-labelledby="contact-title">
+            <header class="contact-header">
+              <div>
+                <h2 id="contact-title" class="contact-title">Begin your coverage strategy review</h2>
+                <p class="contact-copy">
+                  This process starts with a structured intake so your consultation is focused and
+                  efficient. Share a few details below and you’ll receive follow‑up to confirm your
+                  time and prepare for the review.
+                </p>
+              </div>
+              <div class="contact-meta">
+                <p style="margin: 0 0 0.35rem">
+                  Ideal for:
+                  <br />
+                  1–25 employee businesses, 1099‑heavy companies, solo founders, and high‑income
+                  contractors.
+                </p>
+                <p style="margin: 0">
+                  You’ll be contacted within 1–2 business days with next steps and a calendar link.
+                </p>
+              </div>
+            </header>
+
+            <div class="contact-form-grid">
+              <form
+                action="https://formsubmit.co/tyler@richards.health"
+                method="POST"
+              >
+                <input type="hidden" name="_subject" value="New coverage strategy review request" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+                <div class="field">
+                  <label for="full-name">Full name</label>
+                  <input id="full-name" name="full-name" type="text" autocomplete="name" required />
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+
+                <div class="field">
+                  <label for="phone">Phone</label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    autocomplete="tel"
+                    inputmode="tel"
+                  />
+                </div>
+                <div class="field">
+                  <label for="state">State of residence</label>
+                  <select id="state" name="state" required>
+                    <option value="">Select a state…</option>
+                    <option>Alabama</option>
+                    <option>Arkansas</option>
+                    <option>Colorado</option>
+                    <option>Delaware</option>
+                    <option>Florida</option>
+                    <option>Georgia</option>
+                    <option>Illinois</option>
+                    <option>Indiana</option>
+                    <option>Iowa</option>
+                    <option>Kansas</option>
+                    <option>Kentucky</option>
+                    <option>Louisiana</option>
+                    <option>Maryland</option>
+                    <option>Michigan</option>
+                    <option>Mississippi</option>
+                    <option>Missouri</option>
+                    <option>Montana</option>
+                    <option>Nebraska</option>
+                    <option>Nevada</option>
+                    <option>North Carolina</option>
+                    <option>Ohio</option>
+                    <option>Oklahoma</option>
+                    <option>South Carolina</option>
+                    <option>South Dakota</option>
+                    <option>Tennessee</option>
+                    <option>Texas</option>
+                    <option>Utah</option>
+                    <option>Virginia</option>
+                    <option>West Virginia</option>
+                    <option>Wisconsin</option>
+                    <option>Wyoming</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="profession">Profession / industry</label>
+                  <input id="profession" name="profession" type="text" />
+                </div>
+                <div class="field">
+                  <label for="income">Estimated annual income range</label>
+                  <select id="income" name="income">
+                    <option value="">Select a range…</option>
+                    <option>Under $80,000</option>
+                    <option>$80,000 – $150,000</option>
+                    <option>$150,000 – $250,000</option>
+                    <option>$250,000+</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="premium">Current monthly premium</label>
+                  <input
+                    id="premium"
+                    name="premium"
+                    type="text"
+                    inputmode="decimal"
+                    placeholder="$"
+                  />
+                </div>
+                <div class="field">
+                  <label for="coverage-type">Current coverage type</label>
+                  <select id="coverage-type" name="coverage-type">
+                    <option value="">Select an option…</option>
+                    <option>ACA marketplace plan</option>
+                    <option>Private individual plan</option>
+                    <option>Spouse’s employer plan</option>
+                    <option>COBRA</option>
+                    <option>Short‑term medical or alternative plan</option>
+                    <option>Currently uninsured</option>
+                  </select>
+                </div>
+
+                <div class="field field-full">
+                  <label for="time">Preferred consultation time</label>
+                  <input id="time" name="time" type="text" placeholder="Example: Tuesdays after 2pm ET" />
+                </div>
+
+                <div class="field field-full">
+                  <label for="notes">Anything specific you'd like to review?</label>
+                  <textarea
+                    id="notes"
+                    name="notes"
+                    placeholder="For example: 'Compare my current plan to private options' or 'Evaluate cost if I hire 2–3 employees this year.'"
+                  ></textarea>
+                  <p class="hint">
+                    You’ll receive an email confirming receipt and outlining next steps. No
+                    high‑pressure sales process.
+                  </p>
+                </div>
+
+                <div class="field field-full">
+                  <div class="contact-cta-row">
+                    <button class="btn btn-secondary" type="submit">
+                      Request my structured review
+                    </button>
+                    <p class="hint" style="margin: 0">
+                      By submitting, you’re requesting an initial consultation. This is not an
+                      application for coverage.
+                    </p>
+                  </div>
+                </div>
+              </form>
+
+              <div>
+                <p class="contact-copy" style="margin-top: 0">
+                  Behind every call is a simple goal: help you see your health coverage the way you
+                  see the rest of your business—structured, intentional, and aligned with how you
+                  actually operate.
+                </p>
+                <ul class="trust-list" style="margin-top: 0.75rem">
+                  <li>
+                    <span class="trust-icon" aria-hidden="true">✓</span>
+                    <span>20–30 minute structured review focused on clarity, not pressure</span>
+                  </li>
+                  <li>
+                    <span class="trust-icon" aria-hidden="true">✓</span>
+                    <span>Documentation you can revisit or share with your CPA or advisor</span>
+                  </li>
+                  <li>
+                    <span class="trust-icon" aria-hidden="true">✓</span>
+                    <span>Follow‑up recommendations aligned with your risk and goals</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <footer>
+        <div style="max-width: 1120px; margin: 0 auto">
+          <p style="margin: 0 0 0.4rem">
+            Richards Health — Health insurance strategy for self‑employed business owners and
+            independent professionals.
+          </p>
+          <p style="margin: 0">
+            This site is for informational purposes only and does not constitute legal, tax, or
+            financial advice. Coverage availability and recommendations vary by state and carrier.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
