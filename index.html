@@ -204,6 +204,15 @@
         width: 100%;
       }
 
+      .nav-link-cta {
+        font-weight: 700;
+        color: var(--rh-primary-dark);
+      }
+
+      .nav-link-cta::after {
+        display: none;
+      }
+
       .nav-cta {
         display: none;
       }
@@ -306,16 +315,31 @@
 
       .hero-subtitle {
         font-size: 1.05rem;
-        color: var(--rh-neutral-600);
-        max-width: 45ch;
+        color: var(--rh-neutral-700);
+        max-width: 48ch;
+      }
+
+      .hero-support {
+        margin-top: 1rem;
+        font-size: 1rem;
+        color: var(--rh-neutral-700);
+        max-width: 46ch;
+        line-height: 1.55;
       }
 
       .hero-cta-row {
-        margin-top: 1.75rem;
+        margin-top: 1.5rem;
         display: flex;
         flex-wrap: wrap;
         gap: 0.9rem;
         align-items: center;
+      }
+
+      .hero-micro {
+        margin-top: 1rem;
+        font-size: 0.8125rem;
+        color: var(--rh-neutral-500);
+        max-width: 38ch;
       }
 
       .hero-meta {
@@ -548,6 +572,62 @@
         padding-left: 1.1rem;
         font-size: 0.95rem;
         color: var(--rh-neutral-700);
+      }
+
+      .section-card-cta {
+        margin-top: var(--rh-space-lg);
+        margin-bottom: 0;
+      }
+
+      .section-card-cta .btn {
+        display: inline-block;
+      }
+
+      .proof-case-title {
+        font-family: var(--rh-font-display);
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--rh-neutral-900);
+        margin: 0 0 var(--rh-space-md);
+      }
+
+      .what-happens-next {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 var(--rh-space-lg);
+      }
+
+      .what-happens-next li {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--rh-space-md);
+        margin-bottom: var(--rh-space-md);
+        font-size: 0.9375rem;
+        color: var(--rh-neutral-700);
+      }
+
+      .what-happens-next li:last-child {
+        margin-bottom: 0;
+      }
+
+      .what-happens-next .step-num {
+        flex-shrink: 0;
+        width: 1.75rem;
+        height: 1.75rem;
+        border-radius: 999px;
+        background: var(--rh-primary);
+        color: var(--rh-white);
+        font-weight: 700;
+        font-size: 0.8125rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .what-happens-next strong {
+        display: block;
+        color: var(--rh-neutral-900);
+        margin-bottom: 0.15rem;
       }
 
       .pill {
@@ -915,6 +995,8 @@
   </head>
   <body>
     <div class="page-shell">
+      <!-- Nav: Home (brand) | Advisory | States served | About | Start review (primary CTA).
+           Mobile: nav-links hidden, only brand + Start review button. Fewer choices = clearer path to conversion. -->
       <header class="nav">
         <div class="nav-inner">
           <a href="#top" class="brand">
@@ -926,15 +1008,14 @@
           </a>
           <nav aria-label="Main navigation">
             <div class="nav-links">
-              <a href="#designed-for" class="nav-link">Designed for operators</a>
-              <a href="#what-makes-this-different" class="nav-link">How it works</a>
+              <a href="#designed-for" class="nav-link">Advisory</a>
               <a href="#states" class="nav-link">States served</a>
-              <a href="#faq" class="nav-link">FAQ</a>
-              <a href="#contact" class="nav-link">Contact</a>
+              <a href="#about" class="nav-link">About</a>
+              <a href="#contact" class="nav-link nav-link-cta">Start review</a>
             </div>
           </nav>
           <a href="#contact" class="nav-cta">
-            <button class="btn btn-primary" type="button">Book a strategy call</button>
+            <button class="btn btn-primary" type="button">Start review</button>
           </a>
         </div>
       </header>
@@ -947,20 +1028,25 @@
               Health coverage as a business decision
             </div>
             <h1 id="hero-title" class="hero-title">
-              Health Insurance Strategy for <span>Self‑Employed Business Owners</span>
+              Understand Your Real Health Cost. Protect Your Business From the <span>Wrong Plan</span>
             </h1>
             <p class="hero-subtitle">
-              Advisory‑driven individual coverage design for founders, contractors, and independent
-              professionals across Georgia, Texas, Florida, and 26 additional states.
+              Most self‑employed operators underestimate their annual exposure. One poorly structured decision can quietly cost more than a year of premiums.
+            </p>
+            <p class="hero-support">
+              A structured review maps your true exposure and your options in plain language—so you decide from clarity, not guesswork.
             </p>
             <div class="hero-cta-row">
               <a href="#contact">
-                <button class="btn btn-primary" type="button">Schedule a coverage strategy call</button>
+                <button class="btn btn-primary" type="button">See my real cost exposure</button>
               </a>
               <a href="#contact">
-                <button class="btn btn-outline" type="button">Request a structured cost review</button>
+                <button class="btn btn-outline" type="button">Start my structured review</button>
               </a>
             </div>
+            <p class="hero-micro">
+              Not a quote form. A structured review built for independent operators.
+            </p>
             <div class="hero-meta">
               <span>
                 <span class="hero-meta-dot"></span>
@@ -968,7 +1054,7 @@
               </span>
               <span>
                 <span class="hero-meta-dot" style="background: var(--rh-trust-light)"></span>
-                Individual coverage advisory across 29 states
+                Advisory across 29 states — Georgia, Texas, Florida &amp; more
               </span>
             </div>
           </div>
@@ -998,7 +1084,7 @@
                 <div class="hero-panel-status">
                   No advisory fees. No high‑pressure sales process.
                 </div>
-                <a href="#contact" class="hero-panel-cta">Start with a structured intake →</a>
+                <a href="#contact" class="hero-panel-cta">Start my structured review →</a>
               </div>
             </div>
           </aside>
@@ -1084,7 +1170,7 @@
                   <li>Long‑term advisory support at renewal and during life changes</li>
                 </ul>
                 <p>
-                  If you’re looking only for the lowest monthly premium with no context, this isn’t
+                  If the only thing you want is a price quote with no context on exposure or fit, this isn’t
                   the right fit.
                   <br />
                   If you want clarity, structure, and a partner who understands business operators,
@@ -1106,7 +1192,35 @@
             </div>
           </section>
 
-          <!-- SEO + States served -->
+          <!-- Tension: consequences of inaction -->
+          <section id="blind-spots" aria-labelledby="blind-spots-title">
+            <header class="section-header">
+              <div>
+                <div class="section-kicker">Consequence of inaction</div>
+                <h2 id="blind-spots-title" class="section-title">Most self‑employed operators don’t see this coming</h2>
+              </div>
+              <p class="section-subtitle">
+                Ignoring how coverage actually works can leave you overexposed, under‑informed, or locked into a structure that doesn’t fit when your income or family changes.
+              </p>
+            </header>
+            <div class="section-grid">
+              <div>
+                <p><strong>What does ignoring this cost?</strong> You keep paying without knowing whether your total exposure—premium plus deductible plus out‑of‑pocket—is aligned with your risk. One serious claim or a narrow network can turn “cheap premium” into real financial stress.</p>
+                <p><strong>What happens when someone chooses wrong?</strong> Plans that look similar on paper often differ sharply in network, drug coverage, and renewal behavior. Choosing on price alone can mean surprise gaps, denied care, or a plan that disappears at renewal.</p>
+              </div>
+              <div class="section-card">
+                <h3>Real exposure risk</h3>
+                <p>
+                  Uncertainty doesn’t just cost money—it costs mental bandwidth. Business operators who don’t have a clear picture of their coverage risk either over‑worry or under‑prepare. A structured review gives you a single place to see your exposure and your options, so you can decide with confidence instead of doubt.
+                </p>
+                <p class="section-card-cta">
+                  <a href="#contact" class="btn btn-primary">See my real cost exposure</a>
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- States served -->
           <section id="states" aria-labelledby="states-title">
             <header class="section-header">
               <div>
@@ -1271,7 +1385,7 @@
                 <h3 class="service-title">Structured comparison</h3>
                 <p class="service-body">
                   You’ll see side‑by‑side options framed around exposure and sustainability—not just
-                  the lowest monthly premium.
+                  the monthly premium number.
                 </p>
                 <ul class="service-list">
                   <li>ACA marketplace plans where appropriate</li>
@@ -1295,6 +1409,44 @@
                   <li>Ongoing plan performance evaluation</li>
                 </ul>
               </article>
+            </div>
+          </section>
+
+          <!-- Proof / Client outcomes -->
+          <section id="proof" aria-labelledby="proof-title">
+            <header class="section-header">
+              <div>
+                <div class="section-kicker">Proof &amp; outcomes</div>
+                <h2 id="proof-title" class="section-title">Clarity before commitment</h2>
+              </div>
+              <p class="section-subtitle">
+                Real engagements focus on exposure clarity and structural fit—not promises we can’t keep. Here’s how the process has played out for others.
+              </p>
+            </header>
+            <div class="trust-grid">
+              <div>
+                <blockquote class="testimonial">
+                  “Tyler walked us through options we didn’t even know existed. The process felt
+                  strategic instead of transactional.”
+                  <footer>— Small Business Owner, Georgia</footer>
+                </blockquote>
+                <blockquote class="testimonial" style="margin-top: var(--rh-space-lg);">
+                  “Finally understood what we were actually on the hook for—premium plus the rest. No pressure to switch, just clarity.”
+                  <footer>— Independent Contractor, Texas</footer>
+                </blockquote>
+              </div>
+              <div>
+                <h3 class="proof-case-title">Case example: Independent contractor, Texas</h3>
+                <ul class="trust-list">
+                  <li><span class="trust-icon" aria-hidden="true">✓</span><span><strong>Situation:</strong> Sole proprietor, variable income, on a marketplace plan chosen by premium alone.</span></li>
+                  <li><span class="trust-icon" aria-hidden="true">✓</span><span><strong>Blind spot:</strong> Had not mapped total annual exposure or network fit for a recurring specialist.</span></li>
+                  <li><span class="trust-icon" aria-hidden="true">✓</span><span><strong>Structural change:</strong> Structured review compared total cost and network; one alternative aligned better with actual usage.</span></li>
+                  <li><span class="trust-icon" aria-hidden="true">✓</span><span><strong>Result:</strong> Clear comparison in plain language; client chose with confidence. No guarantee—clarity and a better fit.</span></li>
+                </ul>
+                <p class="section-card-cta">
+                  <a href="#contact" class="btn btn-primary">Start my structured review</a>
+                </p>
+              </div>
             </div>
           </section>
 
@@ -1355,11 +1507,9 @@
           <section id="contact" class="contact" aria-labelledby="contact-title">
             <header class="contact-header">
               <div>
-                <h2 id="contact-title" class="contact-title">Begin your coverage strategy review</h2>
+                <h2 id="contact-title" class="contact-title">See your real cost exposure — start here</h2>
                 <p class="contact-copy">
-                  This process starts with a structured intake so your consultation is focused and
-                  efficient. Share a few details below and you’ll receive follow‑up to confirm your
-                  time and prepare for the review.
+                  Submit the form below. You’ll get a clear next step—no pressure, no obligation. We’ll use your details to prepare a focused 20–30 minute review so you leave with clarity on your exposure and options.
                 </p>
               </div>
               <div class="contact-meta">
@@ -1504,8 +1654,8 @@
 
                 <div class="field field-full">
                   <div class="contact-cta-row">
-                    <button class="btn btn-secondary" type="submit">
-                      Request my structured review
+                    <button class="btn btn-primary" type="submit">
+                      Start my structured review
                     </button>
                     <p class="hint" style="margin: 0">
                       By submitting, you’re requesting an initial consultation. This is not an
@@ -1516,25 +1666,24 @@
               </form>
 
               <div>
-                <p class="contact-copy" style="margin-top: 0">
-                  Behind every call is a simple goal: help you see your health coverage the way you
-                  see the rest of your business—structured, intentional, and aligned with how you
-                  actually operate.
+                <h3 style="font-family: var(--rh-font-display); font-size: 1rem; margin: 0 0 var(--rh-space-md); color: var(--rh-neutral-900);">What happens next</h3>
+                <ol class="what-happens-next" aria-label="Process after you submit">
+                  <li>
+                    <span class="step-num" aria-hidden="true">1</span>
+                    <span><strong>Submit intake</strong> Share a few details below. Takes under 2 minutes.</span>
+                  </li>
+                  <li>
+                    <span class="step-num" aria-hidden="true">2</span>
+                    <span><strong>Structured review call</strong> 20–30 minutes. We map your exposure and options in plain language.</span>
+                  </li>
+                  <li>
+                    <span class="step-num" aria-hidden="true">3</span>
+                    <span><strong>Clear comparison and recommendation</strong> You receive a clear picture and next steps—no obligation to enroll.</span>
+                  </li>
+                </ol>
+                <p class="contact-copy" style="margin-top: 0; margin-bottom: 0">
+                  No advisory fees. No high‑pressure sales process. You get clarity; you decide what to do with it.
                 </p>
-                <ul class="trust-list" style="margin-top: 0.75rem">
-                  <li>
-                    <span class="trust-icon" aria-hidden="true">✓</span>
-                    <span>20–30 minute structured review focused on clarity, not pressure</span>
-                  </li>
-                  <li>
-                    <span class="trust-icon" aria-hidden="true">✓</span>
-                    <span>Documentation you can revisit or share with your CPA or advisor</span>
-                  </li>
-                  <li>
-                    <span class="trust-icon" aria-hidden="true">✓</span>
-                    <span>Follow‑up recommendations aligned with your risk and goals</span>
-                  </li>
-                </ul>
               </div>
             </div>
           </section>
